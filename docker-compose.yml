@@ -4,7 +4,7 @@ services:
     build: 
       context: ./words-counter-backend
     ports:
-      - 8081:8081
+      - 8081:80
     network_mode: bridge
     networks:
       - public
