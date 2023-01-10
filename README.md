@@ -10,15 +10,15 @@ The design of the website is very simple, a title "Words Counter", a textbox to 
 
 To make the use more pratical, the website doesn't have any button, the user only need to type in the textbox, and the count will be updated.
 
-## Architecture and fluxogram
+## Architecture and flowchart
 
-The website is made by a backend, that receives the text, if the text is longer than 1000 caracters, `send a Bad Request` saying that text is too long, if not, count, and return the number in a API, and a frontend, that gets the text from the user, send to the backend, get the number response, and show in the screen.
+The website is made by a backend, that receives the text, if the text is longer than 1000 caracters, send a `Bad Request` response, saying that text is too long, if not, count, and return the number in a API, and a frontend, that gets the text from the user, send to the backend, get the number response, and show in the screen.
 
-This fluxogram can be represented in visual way with a flowchart, that can be more simple to understand.
+This flowchart can be represented in visual way, that can be more simple to understand.
 
 ![flowchart](assets/flowchart.jpg)
 
-The limit of 1000 caracters is to simulate a DDoS security, preventing the server to process too many words per second.
+> The limit of 1000 caracters is to simulate a DDoS security, preventing the server to process too many words per second.
 
 ## Running
 
@@ -33,4 +33,4 @@ docker-compose up
 - CORS security to prevent other IP's than frontend to send requests to backend;
 - Container orchestration to prevent the backend or frontend to fall, upping a new instance when it happens;
 - Unitary tests in the frontend;
-- Swagger documentation in backend;
+- Swagger documentation in backend
