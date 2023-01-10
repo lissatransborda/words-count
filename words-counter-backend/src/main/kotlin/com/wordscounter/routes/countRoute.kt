@@ -1,5 +1,6 @@
 package com.wordscounter.routes
 
+import com.wordscounter.utils.stripAccents
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.request.*
@@ -21,6 +22,6 @@ fun Route.countText(){
             return@post call.respond(HttpStatusCode.BadRequest, "text too long")
         }
 
-        return@post call.respond(text.content.split(Regex("[\\w-]+")).size - 1)
+        return@post call.respond(text.content.stripAccents().split(Regex("[\\w-]+")).size - 1)
     }
 }
