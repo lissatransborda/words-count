@@ -37,18 +37,22 @@ export default {
   data: () => ({
     text: "",
     wordsCount: 0,
+    timer: Function,
   }),
   methods: {
-    async onInputText() {
-      if (this.text.length > 1000) {
-        this.wordsCount = "Text too long!";
-      }else{
-        let wordsCount = await axios.post(`${SERVER_URL}/count`, {
-          content: this.text,
-        });
+    onInputText() {
+      clearTimeout(this.timer)
+      this.timer = setTimeout( async () => {
+        if (this.text.length > 1000) {
+          this.wordsCount = "Text too long!";
+        } else {
+          let wordsCount = await axios.post(`${SERVER_URL}/count`, {
+            content: this.text,
+          });
 
-        this.wordsCount = wordsCount.data;
-      }
+          this.wordsCount = wordsCount.data;
+        }
+      }, 1000)
     },
   },
 };
