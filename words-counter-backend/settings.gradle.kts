@@ -1,0 +1,1 @@
+rootProject.name = "com.wordscounter.words-counter"
