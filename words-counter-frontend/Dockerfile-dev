@@ -1,0 +1,15 @@
+FROM node
+
+ENV SERVER_URL http://backend:8001
+
+WORKDIR /usr/src/app/words-counter
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 8001
+
+CMD ["npm", "run", "serve"]
