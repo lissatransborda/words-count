@@ -4,7 +4,7 @@
 
 ## UX/UI
 
-![Printscreen of the website, white page with blue footer, title "Words Counter", textbox with "How many words there are in this sentence?", and below "8 words". In the footer, text "Made by Lissa Ferreira @  2023"](assets/website01.png)
+![Printscreen of the website, white page with blue footer, title "Words Counter", textbox with "How many words are there in this sentence?", and below "8 words". In the footer, text "Made by Lissa Ferreira @  2023"](assets/website01.png)
 
 The design of the website is very simple, a title "Words Counter", a textbox to the user insert the text, and a counter below the textbox, counting how many words there are in the textbox.
 
