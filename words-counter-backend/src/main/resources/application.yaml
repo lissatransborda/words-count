@@ -3,5 +3,4 @@ ktor:
         modules:
             - com.wordscounter.ApplicationKt.module
     deployment:
-#        port: 80
-        port: 8081
+        port: "$PORT:8081"
