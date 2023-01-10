@@ -1,6 +1,6 @@
 # Words Counter
 
-Words Counter is a app to count how many words there are in a text.
+[Words Counter](https://words-count-rho.vercel.app/) is a app to count how many words there are in a text.
 
 ## UX/UI
 
