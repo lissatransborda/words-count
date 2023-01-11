@@ -1,30 +1,30 @@
 <template>
-    <div class="center">
-  <main>
-    <h1 class="title">Words Counter</h1>
+  <div class="center">
+    <main>
+      <h1 class="title">Words Counter</h1>
 
-    <form class="textForm">
-      <textarea
-        name="text"
-        id="text"
-        class="textbox"
-        cols="50"
-        rows="10"
-        v-model="text"
-        placeholder="Put a text to find out the number of words"
-        @input="onInputText()"
-      ></textarea>
-    </form>
+      <form class="textForm">
+        <textarea
+          name="text"
+          id="text"
+          class="textbox"
+          cols="50"
+          rows="10"
+          v-model="text"
+          placeholder="Put a text to find out the number of words"
+          @input="onInputText()"
+        ></textarea>
+      </form>
 
-    <section
-      class="result"
-      v-if="wordsCount > 0 || wordsCount == 'Text too long!'"
-    >
-      {{ wordsCount }} <span v-if="wordsCount == 1">word</span>
-      <span v-if="wordsCount > 1">words</span>
-    </section>
-  </main>
-    </div>
+      <section
+        class="result"
+        v-if="wordsCount > 0 || wordsCount == 'Text too long!'"
+      >
+        {{ wordsCount }} <span v-if="wordsCount == 1">word</span>
+        <span v-if="wordsCount > 1">words</span>
+      </section>
+    </main>
+  </div>
 </template>
 
 <script>
@@ -37,12 +37,13 @@ export default {
   data: () => ({
     text: "",
     wordsCount: 0,
+    lastDate: null,
     timer: Function,
   }),
   methods: {
     onInputText() {
-      clearTimeout(this.timer)
-      this.timer = setTimeout( async () => {
+      clearTimeout(this.timer);
+      this.timer = setTimeout(async () => {
         if (this.text.length > 1000) {
           this.wordsCount = "Text too long!";
         } else {
@@ -50,25 +51,29 @@ export default {
             content: this.text,
           });
 
-          this.wordsCount = wordsCount.data;
+          const responseDate = new Date(wordsCount.data.date);
+
+          if (this.lastDate == null || responseDate > this.lastDate) {
+            this.wordsCount = wordsCount.data.number;
+            this.lastDate = responseDate;
+          }
         }
-      }, 1000)
+      }, 1000);
     },
   },
 };
 </script>
 
 <style scoped>
-.center{
+.center {
   display: block;
   text-align: center;
 }
 main {
   display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 .title {
   font-size: 5ch;

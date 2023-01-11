@@ -8,18 +8,18 @@ The project is made with Kotlin, using Ktor framework.
 
 ### Count Routes
 
-- `/count` - Count how many words there are in a text.
+- `/count` - Count how many words there are in a text, returning the date of the request, and the number of words.
 
-Parameters:
+Example body:
 
 ```json
 { content: "How many words there are in my sentence?" }
 ```
 
-Response:
+Example response:
 
 ```
-8
+{date: 2023-01-11T22:56:38.585370, number: 8}
 ```
 
 ## Running

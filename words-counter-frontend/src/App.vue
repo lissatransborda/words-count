@@ -17,15 +17,15 @@ h1 {
 h2 {
   color: #333;
 }
-footer{
+footer {
   background-color: #302d68;
   margin-top: 60vh;
   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
-footer > h1{
+footer > h1 {
   color: white;
   margin-left: 2em;
 }

@@ -1,4 +1,5 @@
 # Words Counter Frontend
+
 **Words Counter frontend** is the frontend side of Words Counter app. The objective is show how many words there are in a text, sending a POST request to backend.
 
 The project is made with Javascript, using VueJS framework.
@@ -30,6 +31,7 @@ yarn serve
 ```
 
 # Build
+
 ## Docker
 
 To build the image of the project, use docker build, with the command below:
@@ -45,4 +47,3 @@ To build the compiled version of the project, use `build` task, with the command
 ```shell
 yarn build
 ```
-
