@@ -6,7 +6,7 @@ import io.ktor.client.statement.*
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.testing.*
-import models.Text
+import com.wordscounter.models.Text
 import org.junit.Test
 import kotlin.test.assertEquals
 

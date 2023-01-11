@@ -1,4 +1,4 @@
-package models
+package com.wordscounter.models
 
 import kotlinx.serialization.Serializable
 
