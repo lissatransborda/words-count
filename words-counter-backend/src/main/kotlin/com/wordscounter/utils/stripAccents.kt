@@ -5,10 +5,10 @@ fun String.stripAccents(): String{
     val chars: CharArray = this.toCharArray()
 
     val sb = StringBuilder(this)
-    var cont: Int = 0
+    var cont = 0
 
     while (chars.size > cont) {
-        var c: kotlin.Char = chars[cont]
+        var c: Char = chars[cont]
         var c2: String = c.toString()
         //these are my needs, in case you need to convert other accents just Add new entries aqui
         c2 = c2.replace("ã", "a", ignoreCase = true)

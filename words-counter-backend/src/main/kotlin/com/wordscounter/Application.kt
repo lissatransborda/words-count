@@ -1,6 +1,6 @@
 package com.wordscounter
 
-import io.ktor.server.application.*
+import io.ktor.server.application.Application
 import com.wordscounter.plugins.*
 
 fun main(args: Array<String>): Unit =

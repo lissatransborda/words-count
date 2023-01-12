@@ -2,12 +2,14 @@ package com.wordscounter.routes
 
 import com.wordscounter.models.CountResponse
 import com.wordscounter.utils.stripAccents
-import io.ktor.http.*
-import io.ktor.server.application.*
-import io.ktor.server.request.*
-import io.ktor.server.response.*
-import io.ktor.server.routing.*
 import com.wordscounter.models.Text
+import io.ktor.http.HttpStatusCode
+import io.ktor.server.application.*
+import io.ktor.server.request.receive
+import io.ktor.server.response.respond
+import io.ktor.server.routing.Route
+import io.ktor.server.routing.route
+import io.ktor.server.routing.post
 
 fun Route.countRoutes(){
     route("/count"){

@@ -2,15 +2,14 @@ package com.wordscounter
 
 import com.wordscounter.models.CountResponse
 import io.ktor.client.plugins.contentnegotiation.*
+import com.wordscounter.models.Text
+import io.ktor.client.call.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
-import io.ktor.serialization.kotlinx.json.*
-import io.ktor.server.testing.*
-import com.wordscounter.models.Text
-import io.ktor.client.call.*
+import io.ktor.serialization.kotlinx.json.json
+import io.ktor.server.testing.testApplication
 import org.junit.Test
-import java.time.LocalDateTime
 import kotlin.test.assertEquals
 
 
