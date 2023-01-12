@@ -12,6 +12,12 @@ The project is made with Javascript, using VueJS framework.
 
 The website have only one page, that is the homepage with the form to input the text.
 
+## Requirements
+
+- NodeJS 18.13.0+
+- NPM 8.19.2+
+- Docker 20.10.22+ (optional)
+
 # Running
 
 ## Docker
@@ -19,7 +25,7 @@ The website have only one page, that is the homepage with the form to input the 
 The app can be run using `lissatransborda/words-counter-frontend` image, with the command below:
 
 ```shell
-docker run -i -p 8080:8080 lissatransborda/wordscounter-frontend
+docker run -i -p 8080:8080 lissatransborda/words-counter-frontend
 ```
 
 ## Yarn

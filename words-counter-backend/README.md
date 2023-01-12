@@ -22,6 +22,11 @@ Example response:
 {date: 2023-01-11T22:56:38.585370, number: 8}
 ```
 
+# Requirements
+
+- OpenJDK 11
+- Docker 20.10.22+ (optional)
+
 ## Running
 
 ### Docker
@@ -29,7 +34,7 @@ Example response:
 The app can be run using `lissatransborda/words-counter-backend` image, with the command below:
 
 ```shell
-docker run -i -p 8081:8081 lissatransborda/wordscounter-backend
+docker run -i -p 8081:8081 lissatransborda/words-counter-backend
 ```
 
 ### Gradle
