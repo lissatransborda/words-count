@@ -18,7 +18,7 @@
 
       <section
         class="result"
-        v-if="wordsCount > 0 || wordsCount == 'Text too long!'"
+        v-if="wordsCount > 0 || typeof wordsCount == 'string'"
       >
         {{ wordsCount }} <span v-if="wordsCount == 1">word</span>
         <span v-if="wordsCount > 1">words</span>
@@ -47,6 +47,7 @@ export default {
         if (this.text.length > 1000) {
           this.wordsCount = "Text too long!";
         } else {
+          this.wordsCount = "Processing text...";
           let wordsCount = await axios.post(`${SERVER_URL}/count`, {
             content: this.text,
           });
